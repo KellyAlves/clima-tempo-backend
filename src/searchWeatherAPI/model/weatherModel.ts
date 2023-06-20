@@ -1,4 +1,4 @@
-const weatherModel = {
+const WeatherModel = {
     weatherDate: {
         name: 'weatherDate',
         notNull: true,
@@ -43,4 +43,4 @@ const weatherModel = {
     }
 }
 
-export {weatherModel}
+export {WeatherModel}

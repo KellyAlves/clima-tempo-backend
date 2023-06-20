@@ -1,4 +1,4 @@
-const periodModel= {
+const PeriodModel= {
     periodBegin: {
         name: 'periodBegin',
         notNull: false,
@@ -14,4 +14,4 @@ const periodModel= {
         position: 1
     }
 }
-export {periodModel}
+export {PeriodModel}

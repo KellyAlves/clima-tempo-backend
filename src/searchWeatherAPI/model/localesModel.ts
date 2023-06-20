@@ -1,4 +1,4 @@
-const localesModel = {
+const LocalesModel = {
     id:{
         name: 'id',
         primaryKey: true,
@@ -40,4 +40,4 @@ const localesModel = {
         position: 4
     }
 }
-export {localesModel}
+export {LocalesModel}
