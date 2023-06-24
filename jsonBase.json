@@ -1,0 +1,219 @@
+{
+  "locales": {
+    "3735": {
+      "id": 3735,
+      "name": "Osasco",
+      "state": "SP",
+      "latitude": -23.532,
+      "longitude": -46.792
+    },
+    "3477": {
+      "id": 3477,
+      "name": "São Paulo",
+      "state": "SP",
+      "latitude": -23.548,
+      "longitude": -46.636
+    }
+  },
+  
+  "weather": {
+    "3735": {
+      "locale": {
+        "id": 3735,
+        "latitude": -23.532,
+        "longitude": -46.792,
+        "name": "Osasco",
+        "state": "SP"
+      },
+      "period": {
+        "begin": "2017-02-01",
+        "end": "2017-02-07"
+      },
+      "weather": [
+        {
+          "date": "2017-02-01",
+          "rain": {
+            "precipitation": 20,
+            "probability": 60
+          },
+          "temperature": {
+            "max": 28,
+            "min": 20
+          },
+          "text": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora."
+        },
+        {
+          "date": "2017-02-02",
+          "rain": {
+            "precipitation": 10,
+            "probability": 60
+          },
+          "temperature": {
+            "max": 30,
+            "min": 21
+          },
+          "text": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora."
+        },
+        {
+          "date": "2017-02-03",
+          "rain": {
+            "precipitation": 15,
+            "probability": 60
+          },
+          "temperature": {
+            "max": 31,
+            "min": 22
+          },
+          "text": "Sol com algumas nuvens. Chove rápido durante o dia e à noite."
+        },
+        {
+          "date": "2017-02-04",
+          "rain": {
+            "precipitation": 16,
+            "probability": 60
+          },
+          "temperature": {
+            "max": 32,
+            "min": 22
+          },
+          "text": "Sol com algumas nuvens. Chove rápido durante o dia e à noite."
+        },
+        {
+          "date": "2017-02-05",
+          "rain": {
+            "precipitation": 19,
+            "probability": 67
+          },
+          "temperature": {
+            "max": 32,
+            "min": 23
+          },
+          "text": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite."
+        },
+        {
+          "date": "2017-02-06",
+          "rain": {
+            "precipitation": 8,
+            "probability": 60
+          },
+          "temperature": {
+            "max": 33,
+            "min": 22
+          },
+          "text": "Sol com algumas nuvens. Chove rápido durante o dia e à noite."
+        },
+        {
+          "date": "2017-02-07",
+          "rain": {
+            "precipitation": "11",
+            "probability": 60
+          },
+          "temperature": {
+            "max": 30,
+            "min": 25
+          },
+          "text": "Sol com algumas nuvens. Chove rápido durante o dia e à noite."
+        }
+      ]
+    },
+    "3477": {
+      "locale": {
+        "id": 3477,
+        "latitude": -23.548,
+        "longitude": -46.636,
+        "name": "São Paulo",
+        "state": "SP"
+      },
+      "period": {
+        "begin": "2017-02-01",
+        "end": "2017-02-07"
+      },
+      "weather": [
+        {
+          "date": "2017-02-01",
+          "rain": {
+            "precipitation": 20,
+            "probability": 60
+          },
+          "temperature": {
+            "max": 27,
+            "min": 19
+          },
+          "text": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora."
+        },
+        {
+          "date": "2017-02-02",
+          "rain": {
+            "precipitation": 15,
+            "probability": 60
+          },
+          "temperature": {
+            "max": 29,
+            "min": 20
+          },
+          "text": "Sol com muitas nuvens durante o dia. Períodos de nublado, com chuva a qualquer hora."
+        },
+        {
+          "date": "2017-02-03",
+          "rain": {
+            "precipitation": 15,
+            "probability": 60
+          },
+          "temperature": {
+            "max": 30,
+            "min": 21
+          },
+          "text": "Sol com algumas nuvens. Chove rápido durante o dia e à noite."
+        },
+        {
+          "date": "2017-02-04",
+          "rain": {
+            "precipitation": 11,
+            "probability": 60
+          },
+          "temperature": {
+            "max": 31,
+            "min": 21
+          },
+          "text": "Sol com algumas nuvens. Chove rápido durante o dia e à noite."
+        },
+        {
+          "date": "2017-02-05",
+          "rain": {
+            "precipitation": 16,
+            "probability": 67
+          },
+          "temperature": {
+            "max": 31,
+            "min": 22
+          },
+          "text": "Sol e aumento de nuvens de manhã. Pancadas de chuva à tarde e à noite."
+        },
+        {
+          "date": "2017-02-06",
+          "rain": {
+            "precipitation": "8",
+            "probability": 60
+          },
+          "temperature": {
+            "max": 32,
+            "min": 21
+          },
+          "text": "Sol com algumas nuvens. Chove rápido durante o dia e à noite."
+        },
+        {
+          "date": "2017-02-07",
+          "rain": {
+            "precipitation": 26,
+            "probability": 60
+          },
+          "temperature": {
+            "max": 33,
+            "min": 22
+          },
+          "text": "Sol com algumas nuvens. Chove rápido durante o dia e à noite."
+        }
+      ]
+    }
+  }
+}

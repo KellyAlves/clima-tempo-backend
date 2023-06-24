@@ -1,8 +1,6 @@
 export default class WeatherDTO {
     weatherDate: string
+    rain: RainDTO
+    temperature: TemperatureDTO
     weatherText: string
-    minTemp: number
-    maxTemp: number
-    rainProbability: number
-    rainPrecipitation: number
 }

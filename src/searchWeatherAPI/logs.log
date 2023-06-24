@@ -1,0 +1,28 @@
+{"level":"info","message":"Starting server...","timestamp":"2023-06-24T17:18:15.279Z"}
+{"level":"info","message":"Server listening on http://localhost:3030","timestamp":"2023-06-24T17:18:15.305Z"}
+{"level":"info","message":"Starting server...","timestamp":"2023-06-24T17:20:37.891Z"}
+{"level":"info","message":"Server listening on http://localhost:3030","timestamp":"2023-06-24T17:20:37.917Z"}
+[32minfo[39m: Starting server... {"timestamp":"2023-06-24T17:25:37.481Z"}
+[32minfo[39m: Server listening on http://localhost:3030 {"timestamp":"2023-06-24T17:25:37.512Z"}
+[32minfo[39m: Starting server... {"timestamp":"2023-06-24T17:26:23.705Z"}
+[32minfo[39m: Server listening on http://localhost:3030 {"timestamp":"2023-06-24T17:26:23.732Z"}
+[32minfo[39m: Starting server... {"timestamp":"2023-06-24T18:20:11.995Z"}
+[32minfo[39m: Starting getConnection() in DB {"timestamp":"2023-06-24T18:20:12.010Z"}
+[32minfo[39m: Returning db {"timestamp":"2023-06-24T18:20:12.036Z"}
+[32minfo[39m: Server listening on http://localhost:3030 {"timestamp":"2023-06-24T18:20:12.056Z"}
+[32minfo[39m: Starting forecastById() in Contoller {"timestamp":"2023-06-24T18:20:12.201Z"}
+[32minfo[39m: Starting getForecastById() in Service {"timestamp":"2023-06-24T18:20:12.203Z"}
+[32minfo[39m: No forecast found! {"timestamp":"2023-06-24T18:20:12.897Z"}
+[32minfo[39m: Starting forecastById() in Contoller {"timestamp":"2023-06-24T18:22:10.184Z"}
+[32minfo[39m: Starting getForecastById() in Service {"timestamp":"2023-06-24T18:22:10.186Z"}
+[32minfo[39m: No forecast found! {"timestamp":"2023-06-24T18:22:10.358Z"}
+[32minfo[39m: Starting listForecast() in Contoller {"timestamp":"2023-06-24T18:22:15.808Z"}
+[32minfo[39m: Returning forecasts {"timestamp":"2023-06-24T18:22:15.977Z"}
+[32minfo[39m: Starting listForecast() in Contoller {"timestamp":"2023-06-24T18:22:28.420Z"}
+[32minfo[39m: Returning forecasts {"timestamp":"2023-06-24T18:22:28.584Z"}
+[32minfo[39m: Starting forecastById() in Contoller {"timestamp":"2023-06-24T18:22:38.481Z"}
+[32minfo[39m: Starting getForecastById() in Service {"timestamp":"2023-06-24T18:22:38.481Z"}
+[32minfo[39m: Returning forecast {"timestamp":"2023-06-24T18:22:38.642Z"}
+[32minfo[39m: Starting forecastById() in Contoller {"timestamp":"2023-06-24T18:22:49.117Z"}
+[32minfo[39m: Starting getForecastById() in Service {"timestamp":"2023-06-24T18:22:49.117Z"}
+[32minfo[39m: No forecast found! {"timestamp":"2023-06-24T18:22:49.277Z"}
