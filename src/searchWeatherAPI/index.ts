@@ -26,6 +26,6 @@ app.use((req, res, next) => {
 
 app.listen(port, () => {
     logger.info(`Server listening on http://localhost:${port}`)
-    logger.debug(`Starting server on port ${port} an routes /locales, /forecasts, /locales/:id, /forecasts/:id`)
+    logger.debug(`Starting server on port ${port} `)
     
 })
