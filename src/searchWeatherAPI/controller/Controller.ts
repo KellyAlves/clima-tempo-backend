@@ -74,4 +74,20 @@ export default class Controller extends Service {
             return res.status(500).json({ message: 'Internal server error' });
         }
     }
+    public async checkPeriod(req: Request, res: Response): Promise<Response> { 
+        try {
+            
+            logger.info('Starting forecastById() in Contoller')
+            const { id, periodBegin, periodEnd } = req.params
+            const data: Boolean | null = await this.getCheckPeriod(id, periodBegin, periodEnd);
+
+            if (data === null) {
+                return res.status(404).json({ message: 'No period found!' });
+            }
+            return res.status(200).json(data);
+        } catch (error) {
+            logger.error('Internal server error', error)
+            return res.status(500).json({ message: 'Internal server error' });
+        }
+    }
 }

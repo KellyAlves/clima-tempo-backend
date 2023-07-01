@@ -1,4 +1,4 @@
 export default class PeriodDTO {
-    periodBegin: string
-    periodEnd: string
+    begin: string
+    end: string
 }

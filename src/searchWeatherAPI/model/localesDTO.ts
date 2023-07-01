@@ -1,6 +1,6 @@
 export default class LocalesDTO {
     id: number
-    nameLocales: string
+    name: string
     state: string
     latitude: number
     longitude: number

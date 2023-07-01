@@ -1,8 +1,9 @@
 import IService from "./IService"
 import 'firebase/database'
-import { ForecastDTO, LocalesDTO } from "../model"
+import { ForecastDTO, LocalesDTO, PeriodDTO } from "../model"
 import { getConnection, child, get, ref} from "../../../layers/firebaseDB"
 import logger from '../../../layers/logger/logConfig'
+import e from "express"
 
 export default class Service implements IService {
 
@@ -83,7 +84,7 @@ export default class Service implements IService {
     public async getForecastById(id: string): Promise<ForecastDTO | null> { 
         try {
             logger.info('Starting getForecastById() in Service')
-            const snapshot = await get(child(this.connection, `weather/${id}`))
+            const snapshot = await get(child(this.connection, `weather/${id}/weather`))
 
             if (!snapshot.exists()) {
                 logger.info('No forecast found!')
@@ -99,5 +100,34 @@ export default class Service implements IService {
             logger.error('Error in getForecastById()', error)
             return null
         }
+    }
+    public async getCheckPeriod (id: string, periodBegin: string, periodEnd: string): Promise<Boolean | null> {
+        try {
+            logger.info('Starting getCheckPeriod() in Service')
+            const snapshot = await get(child(this.connection, `weather/${id}/period`))
+
+            if (!snapshot.exists()) {
+                logger.info('No period found!')
+                return null;
+            }
+
+            const periodData: PeriodDTO  = snapshot.val();
+            let response = false
+
+            const inputBegin = new Date(periodBegin);
+            const inputEnd = new Date(periodEnd);
+            const periodDataBegin = new Date(periodData.begin);
+            const periodDataEnd = new Date(periodData.end);
+
+            if ( periodDataBegin <= inputBegin &&  inputEnd <= periodDataEnd) {
+                response = true
+            }
+            logger.info('Returning forecast')
+            logger.debug('Returning forecast')
+            return response
+          } catch (error) {
+            logger.error('Error in getCheckPeriod()', error);
+            return null;
+          }
     }
 }

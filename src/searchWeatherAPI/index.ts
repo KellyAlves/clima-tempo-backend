@@ -17,6 +17,7 @@ app.get('/locales/', contoller.listLocales.bind(contoller))
 app.get('/forecasts/', contoller.listForecast.bind(contoller))
 app.get('/locales/:id', contoller.localesById.bind(contoller))
 app.get('/forecasts/:id', contoller.forecastById.bind(contoller))
+app.get('/period/:id/:periodBegin/:periodEnd', contoller.checkPeriod.bind(contoller))
 // app.delete('/books/:id', bookController.deleteBook.bind(bookController));
 
 app.use((req, res, next) => {
