@@ -1,0 +1,14 @@
+[32minfo[39m: Starting server... {"timestamp":"2023-07-01T23:13:20.817Z"}
+[32minfo[39m: Starting getConnection() in DB {"timestamp":"2023-07-01T23:13:20.832Z"}
+[32minfo[39m: Returning db {"timestamp":"2023-07-01T23:13:20.848Z"}
+[32minfo[39m: Server listening on http://localhost:3030 {"timestamp":"2023-07-01T23:13:20.868Z"}
+[32minfo[39m: Starting listLocales() in Contoller {"timestamp":"2023-07-01T23:13:29.180Z"}
+[32minfo[39m: Returning locales {"timestamp":"2023-07-01T23:13:29.356Z"}
+[32minfo[39m: Starting localesById() in Contoller {"timestamp":"2023-07-01T23:14:00.233Z"}
+[32minfo[39m: Returning locale {"timestamp":"2023-07-01T23:14:00.400Z"}
+[32minfo[39m: Starting forecastById() in Contoller {"timestamp":"2023-07-01T23:14:29.291Z"}
+[32minfo[39m: Starting getForecastById() in Service {"timestamp":"2023-07-01T23:14:29.293Z"}
+[32minfo[39m: Returning weather {"timestamp":"2023-07-01T23:14:29.459Z"}
+[32minfo[39m: Starting forecastById() in Contoller {"timestamp":"2023-07-01T23:15:50.945Z"}
+[32minfo[39m: Starting getCheckPeriod() in Service {"timestamp":"2023-07-01T23:15:50.947Z"}
+[32minfo[39m: Returning forecast {"timestamp":"2023-07-01T23:15:51.109Z"}

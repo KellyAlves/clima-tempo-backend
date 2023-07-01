@@ -1,9 +1,8 @@
 import IService from "./IService"
 import 'firebase/database'
-import { ForecastDTO, LocalesDTO, PeriodDTO } from "../model"
+import { WeatherDTO, LocalesDTO, PeriodDTO } from "../model"
 import { getConnection, child, get, ref} from "../../../layers/firebaseDB"
 import logger from '../../../layers/logger/logConfig'
-import e from "express"
 
 export default class Service implements IService {
 
@@ -11,7 +10,7 @@ export default class Service implements IService {
     private db: any
 
     async init() {
-        this.db = await getConnection();
+        this.db = await getConnection()
         this.connection = ref(this.db)
     }
 
@@ -28,39 +27,16 @@ export default class Service implements IService {
 
             allLocales.forEach((loc) => {
                 locales.push(loc.val())
-            });
+            })
             logger.info('Returning locales')
             logger.debug('Returning locales', locales)
-            return locales;
+            return locales
         } catch (error) {
             logger.error('Error in getAllLocales()', error)
-            return null;
+            return null
         }
     }
-    public async getAllForecast(): Promise<ForecastDTO[] | null> {
-        try {
-            logger.debug('Starting getAllForecast() in Service')
-            const forecasts: ForecastDTO[] = []
-
-            const allForecasts = await get(child(this.connection, 'weather/'))
-
-            if (!allForecasts.exists()) {
-                logger.info('No forecasts found!')
-                return null
-            }
-
-            allForecasts.forEach((fct) => {
-                forecasts.push(fct.val())
-            });
-
-            logger.info('Returning forecasts')
-            logger.debug('Returning forecasts', forecasts)
-            return forecasts
-        } catch (error) {
-            logger.error('Error in getAllForecast()', error)
-            return null;
-        }
-    }
+    
     public async getLocalesById(id: string): Promise<LocalesDTO | null> {
         try {
             logger.debug('Starting getLocalesById() in Service')
@@ -68,7 +44,7 @@ export default class Service implements IService {
 
             if (!snapshot.exists()) {
                 logger.info('No locale found!')
-                return null;
+                return null
             }
 
             const locale: LocalesDTO = snapshot.val()
@@ -81,23 +57,23 @@ export default class Service implements IService {
             return null
         }
     }
-    public async getForecastById(id: string): Promise<ForecastDTO | null> { 
+    public async getWeathertById(id: string): Promise<WeatherDTO | null> { 
         try {
             logger.info('Starting getForecastById() in Service')
             const snapshot = await get(child(this.connection, `weather/${id}/weather`))
 
             if (!snapshot.exists()) {
                 logger.info('No forecast found!')
-                return null;
+                return null
             }
 
-            const forecast: ForecastDTO = snapshot.val()
-            logger.info('Returning forecast')
-            logger.debug('Returning forecast', forecast)
-            return forecast
+            const weather: WeatherDTO = snapshot.val()
+            logger.info('Returning weather')
+            logger.debug('Returning weather', weather)
+            return weather
 
         } catch (error) {
-            logger.error('Error in getForecastById()', error)
+            logger.error('Error in getWeatherById()', error)
             return null
         }
     }
@@ -108,16 +84,16 @@ export default class Service implements IService {
 
             if (!snapshot.exists()) {
                 logger.info('No period found!')
-                return null;
+                return null
             }
 
-            const periodData: PeriodDTO  = snapshot.val();
+            const periodData: PeriodDTO  = snapshot.val()
             let response = false
 
-            const inputBegin = new Date(periodBegin);
-            const inputEnd = new Date(periodEnd);
-            const periodDataBegin = new Date(periodData.begin);
-            const periodDataEnd = new Date(periodData.end);
+            const inputBegin = new Date(periodBegin)
+            const inputEnd = new Date(periodEnd)
+            const periodDataBegin = new Date(periodData.begin)
+            const periodDataEnd = new Date(periodData.end)
 
             if ( periodDataBegin <= inputBegin &&  inputEnd <= periodDataEnd) {
                 response = true
@@ -126,8 +102,8 @@ export default class Service implements IService {
             logger.debug('Returning forecast')
             return response
           } catch (error) {
-            logger.error('Error in getCheckPeriod()', error);
-            return null;
+            logger.error('Error in getCheckPeriod()', error)
+            return null
           }
     }
 }

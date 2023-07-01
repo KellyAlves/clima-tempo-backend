@@ -1,10 +1,9 @@
-import { ForecastDTO, LocalesDTO, PeriodDTO } from "../model"
+import { LocalesDTO, WeatherDTO } from "../model"
 
 interface IService {
     getAllLocales(): Promise<LocalesDTO[]|null>
-    getAllForecast(): Promise<ForecastDTO[]|null>
     getLocalesById(nameLocales: string): Promise<LocalesDTO|null>
-    getForecastById(id: string): Promise<ForecastDTO | null> 
+    getWeathertById(id: string): Promise<WeatherDTO| null> 
     getCheckPeriod(id: string, periodBegin: string, periodEnd: string): Promise<Boolean | null>
 }
 
